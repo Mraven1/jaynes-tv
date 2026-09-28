@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brian T. Jaynes</title>
+<meta name="description" content="Brian T. Jaynes — filmmaker, screenwriter, songwriter. Van, Texas.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,400&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#050507; --bg2:#0F0F14; --card:#15151C; --fg:#FFFFFF; --fg2:#D9D9E3; --mute:#9A9AAA;
+  --gold:#FFC145; --cyan:#5EEAD4; --red:#FF5C5C; --line:rgba(255,255,255,.28);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Source Sans 3",Arial,sans-serif;font-size:18px;line-height:1.6}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;margin:0}
+a{color:inherit}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:22px;height:64px;padding:0 24px;background:var(--bg2);border-bottom:2px solid var(--gold)}
+.top .brand{font-family:Fraunces,serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--fg)}
+.top .brand b{color:var(--gold);font-weight:600}
+.top nav{margin-left:auto;display:flex;gap:6px}
+.top nav a{text-decoration:none;color:var(--fg);padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px}
+.top nav a:hover,.top nav a:focus-visible{background:var(--gold);color:#050507;outline:none}
+.wrap{padding:0 40px 80px;max-width:1400px;margin:0 auto}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center;padding:64px 0 56px}
+.hero h1{font-size:clamp(46px,7vw,92px);line-height:.96;letter-spacing:-.02em}
+.hero .line{font-family:Fraunces,serif;font-style:italic;font-weight:300;font-size:clamp(20px,2.2vw,28px);color:var(--fg2);margin-top:22px;max-width:28ch;line-height:1.3}
+.hero .where{color:var(--mute);margin-top:18px;font-size:16px}
+.frame{aspect-ratio:4/5;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:grid;place-items:center}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.frame .empty{color:var(--mute);font-style:italic;font-family:Fraunces,serif;font-size:17px;text-align:center;padding:20px}
+
+/* doors */
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:8px}
+.door{position:relative;display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:28px 26px 30px 30px;overflow:hidden;transition:border-color .15s}
+.door::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px}
+.door.film::before{background:var(--gold)} .door.music::before{background:var(--cyan)} .door.studio::before{background:var(--red)}
+.door h2{font-size:clamp(26px,2.4vw,34px);line-height:1.05}
+.door p{color:var(--fg2);margin:12px 0 0;font-size:16.5px;max-width:34ch}
+.door .go{display:inline-block;margin-top:18px;font-weight:600;font-size:15px;color:var(--gold)}
+.door.music .go{color:var(--cyan)} .door.studio .go{color:var(--red)}
+.door:hover,.door:focus-visible{border-color:var(--gold);outline:none}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
+.about h2{font-size:28px;margin-bottom:14px}
+.about p{color:var(--fg2);margin:0 0 14px;max-width:62ch}
+.contact a{color:var(--gold);text-decoration:none;font-weight:600;font-size:20px;font-family:Fraunces,serif}
+.contact a:hover{text-decoration:underline}
+footer{margin-top:64px;color:var(--mute);font-size:14px;display:flex;gap:18px;flex-wrap:wrap}
+
+@media (max-width:820px){
+  .wrap{padding:0 20px 60px}
+  .hero{grid-template-columns:1fr;gap:28px;padding:36px 0 40px}
+  .frame{aspect-ratio:4/5;max-width:420px}
+  .about{grid-template-columns:1fr;gap:28px}
+  .top nav{gap:2px}.top nav a{padding:8px 10px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a class="brand" href="/">Jaynes<b>.tv</b></a>
+  <nav>
+    <a href="https://film.jaynes.tv">Film</a>
+    <a href="https://music.jaynes.tv">Music</a>
+    <a href="https://studio.jaynes.tv">Studio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div>
+      <h1>Brian T.<br>Jaynes</h1>
+      <!-- EDIT: your one-line intro -->
+      <p class="line">Filmmaker, screenwriter and songwriter telling true stories of faith under pressure.</p>
+      <p class="where">Van, Texas</p>
+    </div>
+    <!-- EDIT: replace the .empty div with <img src="brian.jpg" alt="Brian T. Jaynes"> -->
+    <div class="frame"><div class="empty">Portrait goes here — drop brian.jpg next to this file</div></div>
+  </section>
+
+  <section class="doors">
+    <a class="door film" href="https://film.jaynes.tv">
+      <h2>Film</h2>
+      <p>The development slate: features, series and one novel, built for the faith market.</p>
+      <span class="go">See the slate</span>
+    </a>
+    <a class="door music" href="https://music.jaynes.tv">
+      <h2>Music</h2>
+      <p>Americana songs written for artists, film and sync.</p>
+      <span class="go">Hear the songs</span>
+    </a>
+    <a class="door studio" href="https://studio.jaynes.tv">
+      <h2>Studio</h2>
+      <p>An AI-assisted animation and VFX pipeline, and the tools built to run it.</p>
+      <span class="go">See the studio</span>
+    </a>
+  </section>
+
+  <section class="about">
+    <div>
+      <h2>About</h2>
+      <!-- EDIT: short bio -->
+      <p>Brian T. Jaynes is a filmmaker, screenwriter, photographer and cinematographer based in East Texas. His work moves between live-action features, AI-assisted animation, and songwriting, with a slate of projects developed for faith-market distributors.</p>
+      <p>He grew up in Lindale, Texas, and is a single father of twin sons.</p>
+    </div>
+    <div class="contact" id="contact">
+      <h2>Contact</h2>
+      <!-- EDIT: your email -->
+      <p><a href="mailto:brian@jaynes.tv">brian@jaynes.tv</a></p>
+      <p style="color:var(--mute);font-size:15px">For scripts, songs, licensing and production inquiries.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Brian T. Jaynes</span>
+    <span>jaynes.tv</span>
+  </footer>
+
+</div>
+</body></html>
